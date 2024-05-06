@@ -192,6 +192,7 @@ def inList(array, arraylist):
             return True
     return False
 
+
 """### Environment
 
 The following cell implments an envinronment and the training loop for each agent:
@@ -236,9 +237,6 @@ class WCST_Env(dm_env.Environment):
         self.rule_changed = False
         self.rule_change_points = []
         self.random_change_prob = 0.1  # Probability of rule change at any given step
-
-
-
 
     def new_card(self):
         v_data = [] #list type
@@ -392,6 +390,8 @@ class WCST_Env(dm_env.Environment):
         environment_spec = specs.make_environment_spec(environment)
         return environment, environment_spec
 
+
+#Training loop
 def dqn_make_network(action_spec: specs.DiscreteArray) -> snt.Module:
     return snt.Sequential([
         snt.Flatten(),
@@ -474,6 +474,7 @@ print(f'Overall Accuracy: {total_accuracy:.2f}%')
 print(f'Total Errors: {sum(episode_errors)}')
 print(f'Total Wins: {sum(episode_wins)}')
 print(f'Error Rate: {total_error_rate:.2f}%')
+
 
 # Plotting the rewards over episodes
 plt.figure(figsize=(10, 7))
