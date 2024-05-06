@@ -192,6 +192,7 @@ def inList(array, arraylist):
             return True
     return False
 
+
 """### Environment
 
 The following cell implments an envinronment and the training loop for each agent:
@@ -199,6 +200,7 @@ The following cell implments an envinronment and the training loop for each agen
 """
 
 from acme import specs as acme_specs
+
 
 """## WCST NS-DQN agent (Our modified agent)
 
@@ -362,8 +364,6 @@ class WCSTns_Env(dm_env.Environment):
         name='observation')
 
 
-
-
     def action_spec(self):
         return dm_env.specs.DiscreteArray(
             num_values=len(WCSTns_Env.ACTIONS),
@@ -387,6 +387,9 @@ class WCSTns_Env(dm_env.Environment):
         # Grab the spec of the environment.
         environment_spec = specs.make_environment_spec(environment)
         return environment, environment_spec
+
+
+#Training loop
 
 def dqn_make_network(action_spec: specs.DiscreteArray) -> snt.Module:
     return snt.Sequential([
@@ -468,6 +471,8 @@ print(f'Overall Accuracy: {total_accuracy_ns:.2f}%')
 print(f'Total Errors: {sum(episode_errors_ns)}')
 print(f'Total Wins: {sum(episode_wins_ns)}')
 print(f'Error Rate: {total_error_rate_ns:.2f}%')
+
+
 
 # Plotting the rewards over episodes
 plt.figure(figsize=(10, 7))
