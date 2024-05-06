@@ -11,6 +11,7 @@ This project was done in collaboration with my supervisor [Dr. Eduardo H. Ramire
   
 ## Some Results from the paper
 ![trio_100](https://github.com/dfangnon/NS-DQN_WCST/assets/126726283/0aa4a635-fc47-42d8-b11f-0775538c1456)
- ![Duel_XRP_port](https://github.com/dfangnon/RL_Final_Projects_AMMI2023/assets/126726283/4a1bddf6-b519-43cd-b81a-d5e6379db73b)
-![Dueling_BTC-USD Trade Signals](https://github.com/dfangnon/RL_Final_Projects_AMMI2023/assets/126726283/726dba1a-c7e2-4d13-8008-c73bc7167b04)
-![Dueling_BTC-USD Portofolio Wealth](https://github.com/dfangnon/RL_Final_Projects_AMMI2023/assets/126726283/87fc6d03-3158-4384-a0f1-6fa52afc19d9)
+![trio_500](https://github.com/dfangnon/NS-DQN_WCST/assets/126726283/208b3e73-f4b2-40c8-b30f-e2186f0e12a5)
+![trio_1000](https://github.com/dfangnon/NS-DQN_WCST/assets/126726283/ca3699ef-bc4a-4f53-9b91-f1e3770f9689)
+
+
