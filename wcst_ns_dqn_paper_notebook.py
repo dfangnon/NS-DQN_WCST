@@ -220,7 +220,7 @@ def inList(array, arraylist):
 
 """### Environment
 
-The following cell implments an envinronment and the training loop for each agent:
+The following cell implements an envinronment and the training loop for each agent:
 - Rewards the agent once the action was correct (i.e., a normative model of the environment).
 """
 
@@ -408,7 +408,7 @@ class WCSTR_Env(dm_env.Environment):
 
     @staticmethod
     def create_environment():
-        """Utility function to create a N-back environment and its spec."""
+        """Utility function to create a WCST environment and its spec."""
 
         environment = wrappers.SinglePrecisionWrapper(WCSTR_Env())
 
@@ -680,7 +680,7 @@ class WCST_Env(dm_env.Environment):
 
     @staticmethod
     def create_environment():
-        """Utility function to create a N-back environment and its spec."""
+        """Utility function to create a WCST environment and its spec."""
 
         environment = wrappers.SinglePrecisionWrapper(WCST_Env())
 
@@ -963,7 +963,7 @@ class WCSTns_Env(dm_env.Environment):
 
     @staticmethod
     def create_environment():
-        """Utility function to create a N-back environment and its spec."""
+        """Utility function to create a WCST environment and its spec."""
 
         environment = wrappers.SinglePrecisionWrapper(WCSTns_Env())
 
