@@ -113,6 +113,7 @@ class RandomAgent(acme.Actor):
     """Does not update as the RandomAgent does not learn from data."""
     pass
 
+
 """### WCST utility methods
 
 From [Pauline Bock's repository](https://github.com/PaulineBock/WCSTDehaeneChangeux)
@@ -218,6 +219,7 @@ def inList(array, arraylist):
             return True
     return False
 
+
 """### Environment
 
 The following cell implments an envinronment and the training loop for each agent:
@@ -225,6 +227,7 @@ The following cell implments an envinronment and the training loop for each agen
 """
 
 from acme import specs as acme_specs
+
 
 """## RANDOM
 
@@ -260,8 +263,6 @@ class WCSTR_Env(dm_env.Environment):
         self.v_data = []
         self.last_successful_action = None
         self.random_change_prob = 0.1  # Probability of rule change at any given step
-
-
 
 
     def new_card(self):
@@ -416,6 +417,8 @@ class WCSTR_Env(dm_env.Environment):
         environment_spec = specs.make_environment_spec(environment)
         return environment, environment_spec
 
+
+#Training loop
 random_seed(2022)
 
 env, env_spec = WCSTR_Env.create_environment()
@@ -484,6 +487,8 @@ print(f'Overall Accuracy: {total_accuracy_r:.2f}%')
 print(f'Total Errors: {sum(episode_errors_r)}')
 print(f'Total Wins: {sum(episode_wins_r)}')
 print(f'Error Rate: {total_error_rate_r:.2f}%')
+
+
 
 # Plotting the rewards over episodes
 plt.figure(figsize=(10, 7))
